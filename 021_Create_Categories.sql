@@ -1,0 +1,40 @@
+CREATE TABLE [dbo].[Categories](
+	[CategoryId] [int] IDENTITY(1,1) NOT NULL,
+	[CategoryName] [nvarchar](200) NOT NULL,
+	[ParentCategoryId] [int] NULL,
+	[Description] [nvarchar](500) NULL,
+	[IsActive] [bit] NOT NULL,
+	[CreatedDate] [datetime] NOT NULL,
+	[UpdatedDate] [datetime] NULL,
+	[CategoryCode] [nvarchar](100) NULL,
+	[CategoryPath] [nvarchar](1000) NULL,
+	[CategoryLevel] [int] NULL,
+	[DisplayOrder] [int] NULL,
+	[ImageUrl] [nvarchar](1000) NULL,
+	[BatchId] [nvarchar](100) NULL,
+	[IsBulkUpload] [bit] NULL,
+	[ChannelCode] [nvarchar](100) NULL,
+	[SellerId] [int] NULL,
+	[CustomerId] [int] NULL,
+	[BannerUrl] [nvarchar](500) NULL,
+	[IconUrl] [nvarchar](500) NULL,
+	[GSTPercentage] [decimal](5, 2) NULL,
+	[HSNCode] [nvarchar](100) NULL,
+	[IsSystemDefined] [bit] NULL,
+	[MetaDescription] [nvarchar](1000) NULL,
+	[MetaTitle] [nvarchar](500) NULL,
+	[CreatedBy] [nvarchar](100) NULL,
+	[UpdatedBy] [nvarchar](100) NULL,
+	[taxTypeCode] [varchar](50) NULL,
+	[gstTaxTypeCode] [varchar](50) NULL,
+	[grnExpiryTolerance] [int] NULL,
+	[dispatchExpiryTolerance] [int] NULL,
+	[returnExpiryTolerance] [int] NULL,
+	[expirable] [bit] NULL,
+	[shelfLife] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[CategoryId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
